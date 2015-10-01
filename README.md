@@ -16,7 +16,7 @@ Notes:
 Installation:
 1. Download all of the files into one directory.
 2. Execute the "make" command.
-3. Copy the executable to the appropriate bin directory. E.g. "cp dircat /usr/bin".
+3. Copy the executable to the appropriate bin directory. E.g. "cp dircat /usr/bin" .
  
 Examples:
 - dircat dir/ output.out
