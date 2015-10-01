@@ -12,7 +12,13 @@ dircat DIRECTORY... OUTPUT...
 
 Notes:
 - The DIRECTORY argument also works with wild cards to select certain files for concatenation. Tested with Ubuntu 14.04.
-- Examples:
+
+Installation:
+1) Download all of the files into one directory.
+2) Execute the "make" command.
+3) Copy the executable to the appropriate bin directory. E.g. "cp dircat /usr/bin".
+ 
+Examples:
 - dircat dir/ output.out
 - dircat dir output.out
 - dircat dir/ dir/output.out
