@@ -32,6 +32,10 @@ int main(int argc, char* argv[])
       if(fileType(argv[1]) == "Directory") {
          dirname = argv[1];
       }
+      // Else if the files are in the current directory get the current directory
+      else if(parseDir(argv[1]) == "") {
+         dirname = getCurrDir();
+      }
       // Else parse the directory from the first argument
       else {
          dirname = parseDir(argv[1]);
@@ -64,13 +68,14 @@ int main(int argc, char* argv[])
 
                // Execute the command
                system(cstr);
-               cout << "Concatenating: " << parseFile(argv[i]) << "\n";
+               cout << "Concatenating: " << entry->d_name << "\n";
             }
          }
       }
       // Else if the first argument is a file check for wild cards and concatenate
       else {
          for(i = 1; i < argEnd; i++) {
+
             // If it is allowed then concatenate the file
             if(fileType(argv[i]) == "File") {
                // Clear the string stream and build the cat command
