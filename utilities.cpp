@@ -95,4 +95,20 @@ string fileType(const string iPath) {
 
 }
 
+// This function returns the current working directory
+string getCurrDir() {
+
+   // Variable declarations
+   char cwd[1024];
+
+   // If command is successful return the current working directory
+   if(getcwd(cwd, sizeof(cwd)) != NULL) {
+      return cwd;
+   }
+   // Else return null
+   else {
+      return NULL;
+   }
+}
+
 
