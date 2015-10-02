@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <sys/stat.h>
+#include <unistd.h>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ using namespace std;
 string parseDir(const string iPath);
 string parseFile(const string iPath);
 string fileType(const string iPath);
+string getCurrDir();
 
 
 #endif /* UTILITIES_H_ */
